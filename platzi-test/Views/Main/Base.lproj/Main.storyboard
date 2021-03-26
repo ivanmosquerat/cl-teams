@@ -40,11 +40,22 @@
                     <navigationItem key="navigationItem" title="Champions League" id="pEJ-n4-8dt"/>
                     <connections>
                         <outlet property="teamsCollectionView" destination="CiL-2Q-zot" id="67q-GY-eIY"/>
+                        <segue destination="YQg-nf-07s" kind="show" id="ZCM-7g-gpM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="93.75"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="3L9-k6-9X3">
+            <objects>
+                <viewControllerPlaceholder id="YQg-nf-07s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hKp-UZ-geH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaV-UK-1He" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799" y="38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f0Y-ZG-2OL">

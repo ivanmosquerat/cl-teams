@@ -9,11 +9,13 @@ import Foundation
 
 enum Cells: String {
     case teamCollectionViewCell
+    case matchCollectionViewCell
     
     var id: String{
         switch self {
         case .teamCollectionViewCell:   return "TeamCollectionViewCell"
         
+        case .matchCollectionViewCell:  return "MatchCollectionViewCell"
         }
     }
 }

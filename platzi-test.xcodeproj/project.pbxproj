@@ -25,6 +25,8 @@
 		244F59D9260E182B005FA143 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59D8260E182B005FA143 /* Match.swift */; };
 		244F59DC260E1884005FA143 /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59DB260E1884005FA143 /* Referee.swift */; };
 		244F59DF260E1917005FA143 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59DE260E1917005FA143 /* Score.swift */; };
+		244F59E4260E337A005FA143 /* MatchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59E2260E337A005FA143 /* MatchCollectionViewCell.swift */; };
+		244F59E5260E337A005FA143 /* MatchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F59E3260E337A005FA143 /* MatchCollectionViewCell.xib */; };
 		FB1F04703F97EB84FF98CF52 /* Pods_platzi_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		244F59D8260E182B005FA143 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		244F59DB260E1884005FA143 /* Referee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
 		244F59DE260E1917005FA143 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		244F59E2260E337A005FA143 /* MatchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCollectionViewCell.swift; sourceTree = "<group>"; };
+		244F59E3260E337A005FA143 /* MatchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCollectionViewCell.xib; sourceTree = "<group>"; };
 		7893B394F7F7F2C8108A4BCF /* Pods-platzi-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.debug.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.debug.xcconfig"; sourceTree = "<group>"; };
 		D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_platzi_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87D0CC461F5226ECCF752CC /* Pods-platzi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.release.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		244F59B8260D884E005FA143 /* Team Detail */ = {
 			isa = PBXGroup;
 			children = (
+				244F59E1260E32A1005FA143 /* Cells */,
 				244F59D5260DAE19005FA143 /* TeamDetail.storyboard */,
 			);
 			path = "Team Detail";
@@ -186,6 +191,15 @@
 			children = (
 				244F59BB260D8928005FA143 /* TeamCollectionViewCell.swift */,
 				244F59BC260D8928005FA143 /* TeamCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		244F59E1260E32A1005FA143 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				244F59E2260E337A005FA143 /* MatchCollectionViewCell.swift */,
+				244F59E3260E337A005FA143 /* MatchCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -268,6 +282,7 @@
 			files = (
 				244F5996260CE3B6005FA143 /* LaunchScreen.storyboard in Resources */,
 				244F59BE260D8928005FA143 /* TeamCollectionViewCell.xib in Resources */,
+				244F59E5260E337A005FA143 /* MatchCollectionViewCell.xib in Resources */,
 				244F5993260CE3B6005FA143 /* Assets.xcassets in Resources */,
 				244F59D6260DAE19005FA143 /* TeamDetail.storyboard in Resources */,
 				244F5991260CE3AF005FA143 /* Main.storyboard in Resources */,
@@ -335,6 +350,7 @@
 				244F59AC260D83D5005FA143 /* Season.swift in Sources */,
 				244F59D9260E182B005FA143 /* Match.swift in Sources */,
 				244F598C260CE3AF005FA143 /* SceneDelegate.swift in Sources */,
+				244F59E4260E337A005FA143 /* MatchCollectionViewCell.swift in Sources */,
 				244F59A8260D821D005FA143 /* Competition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
