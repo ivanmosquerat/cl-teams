@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeamCollectionViewCell" id="gTV-IL-0wX" customClass="TeamCollectionViewCell" customModule="platzi_test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huv-8g-OL8">
+                        <rect key="frame" x="16" y="5" width="288" height="90"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hf9-me-IXB">
+                                <rect key="frame" x="10" y="15.5" width="60" height="58.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="710-18-h6n"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZU6-ph-VL7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Germany" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYM-9R-vvx">
+                                <rect key="frame" x="86" y="0.0" width="197" height="90"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MYM-9R-vvx" secondAttribute="trailing" constant="5" id="9EB-Zf-rqC"/>
+                            <constraint firstItem="MYM-9R-vvx" firstAttribute="centerY" secondItem="huv-8g-OL8" secondAttribute="centerY" id="LIQ-1q-1l2"/>
+                            <constraint firstItem="MYM-9R-vvx" firstAttribute="leading" secondItem="hf9-me-IXB" secondAttribute="trailing" constant="16" id="N7K-Cb-pYh"/>
+                            <constraint firstItem="hf9-me-IXB" firstAttribute="centerY" secondItem="MYM-9R-vvx" secondAttribute="centerY" id="OQt-sE-ie4"/>
+                            <constraint firstItem="MYM-9R-vvx" firstAttribute="top" secondItem="huv-8g-OL8" secondAttribute="top" id="QIi-k9-CxF"/>
+                            <constraint firstItem="hf9-me-IXB" firstAttribute="leading" secondItem="huv-8g-OL8" secondAttribute="leading" constant="10" id="rFb-44-H9n"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="NO"/>
+                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                <size key="value" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="huv-8g-OL8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="NG2-d2-3RZ"/>
+                <constraint firstItem="huv-8g-OL8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="blV-tf-w9r"/>
+                <constraint firstItem="huv-8g-OL8" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="gbQ-c1-RaU"/>
+                <constraint firstItem="huv-8g-OL8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="sjl-mO-Pqi"/>
+            </constraints>
+            <connections>
+                <outlet property="flagImageView" destination="hf9-me-IXB" id="1ht-eA-jYL"/>
+                <outlet property="nameLabel" destination="MYM-9R-vvx" id="tdv-Pv-lop"/>
+            </connections>
+            <point key="canvasLocation" x="-162.31884057971016" y="-61.607142857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flag.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

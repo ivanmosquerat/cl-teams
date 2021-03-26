@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,19 @@
 		244F5991260CE3AF005FA143 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244F598F260CE3AF005FA143 /* Main.storyboard */; };
 		244F5993260CE3B6005FA143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244F5992260CE3B6005FA143 /* Assets.xcassets */; };
 		244F5996260CE3B6005FA143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244F5994260CE3B6005FA143 /* LaunchScreen.storyboard */; };
+		244F59A8260D821D005FA143 /* Competition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59A7260D821D005FA143 /* Competition.swift */; };
+		244F59AC260D83D5005FA143 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59AB260D83D5005FA143 /* Season.swift */; };
+		244F59AF260D8571005FA143 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59AE260D8571005FA143 /* Team.swift */; };
+		244F59B2260D85BC005FA143 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59B1260D85BC005FA143 /* Area.swift */; };
+		244F59B5260D85C6005FA143 /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59B4260D85C6005FA143 /* Winner.swift */; };
+		244F59BD260D8928005FA143 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59BB260D8928005FA143 /* TeamCollectionViewCell.swift */; };
+		244F59BE260D8928005FA143 /* TeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F59BC260D8928005FA143 /* TeamCollectionViewCell.xib */; };
+		244F59C1260D9294005FA143 /* CellIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59C0260D9294005FA143 /* CellIds.swift */; };
+		244F59D6260DAE19005FA143 /* TeamDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244F59D5260DAE19005FA143 /* TeamDetail.storyboard */; };
+		244F59D9260E182B005FA143 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59D8260E182B005FA143 /* Match.swift */; };
+		244F59DC260E1884005FA143 /* Referee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59DB260E1884005FA143 /* Referee.swift */; };
+		244F59DF260E1917005FA143 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59DE260E1917005FA143 /* Score.swift */; };
+		FB1F04703F97EB84FF98CF52 /* Pods_platzi_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,21 @@
 		244F5992260CE3B6005FA143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244F5995260CE3B6005FA143 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		244F5997260CE3B6005FA143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		244F59A7260D821D005FA143 /* Competition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competition.swift; sourceTree = "<group>"; };
+		244F59AB260D83D5005FA143 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		244F59AE260D8571005FA143 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		244F59B1260D85BC005FA143 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		244F59B4260D85C6005FA143 /* Winner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
+		244F59BB260D8928005FA143 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		244F59BC260D8928005FA143 /* TeamCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCollectionViewCell.xib; sourceTree = "<group>"; };
+		244F59C0260D9294005FA143 /* CellIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIds.swift; sourceTree = "<group>"; };
+		244F59D5260DAE19005FA143 /* TeamDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamDetail.storyboard; sourceTree = "<group>"; };
+		244F59D8260E182B005FA143 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		244F59DB260E1884005FA143 /* Referee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Referee.swift; sourceTree = "<group>"; };
+		244F59DE260E1917005FA143 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		7893B394F7F7F2C8108A4BCF /* Pods-platzi-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.debug.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.debug.xcconfig"; sourceTree = "<group>"; };
+		D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_platzi_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87D0CC461F5226ECCF752CC /* Pods-platzi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.release.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1F04703F97EB84FF98CF52 /* Pods_platzi_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,8 @@
 			children = (
 				244F5988260CE3AF005FA143 /* platzi-test */,
 				244F5987260CE3AF005FA143 /* Products */,
+				6A58B7D84227ACEFC87FDD7D /* Pods */,
+				5CC7CACC15784DF9D8CA914A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +87,124 @@
 		244F5988260CE3AF005FA143 /* platzi-test */ = {
 			isa = PBXGroup;
 			children = (
+				244F59B9260D885C005FA143 /* Supporting Files */,
+				244F59A6260CE5D7005FA143 /* Resources */,
+				244F59A5260CE58B005FA143 /* Network */,
+				244F59A4260CE566005FA143 /* Constants */,
+				244F59A3260CE4D3005FA143 /* View Model */,
+				244F599F260CE3C9005FA143 /* Views */,
+				244F599E260CE3BF005FA143 /* Models */,
 				244F5989260CE3AF005FA143 /* AppDelegate.swift */,
 				244F598B260CE3AF005FA143 /* SceneDelegate.swift */,
-				244F598D260CE3AF005FA143 /* ViewController.swift */,
-				244F598F260CE3AF005FA143 /* Main.storyboard */,
-				244F5992260CE3B6005FA143 /* Assets.xcassets */,
 				244F5994260CE3B6005FA143 /* LaunchScreen.storyboard */,
 				244F5997260CE3B6005FA143 /* Info.plist */,
 			);
 			path = "platzi-test";
+			sourceTree = "<group>";
+		};
+		244F599E260CE3BF005FA143 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				244F59A7260D821D005FA143 /* Competition.swift */,
+				244F59AB260D83D5005FA143 /* Season.swift */,
+				244F59AE260D8571005FA143 /* Team.swift */,
+				244F59B1260D85BC005FA143 /* Area.swift */,
+				244F59B4260D85C6005FA143 /* Winner.swift */,
+				244F59D8260E182B005FA143 /* Match.swift */,
+				244F59DB260E1884005FA143 /* Referee.swift */,
+				244F59DE260E1917005FA143 /* Score.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		244F599F260CE3C9005FA143 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				244F59B8260D884E005FA143 /* Team Detail */,
+				244F59B7260D8834005FA143 /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		244F59A3260CE4D3005FA143 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		244F59A4260CE566005FA143 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				244F59C0260D9294005FA143 /* CellIds.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		244F59A5260CE58B005FA143 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		244F59A6260CE5D7005FA143 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				244F5992260CE3B6005FA143 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		244F59B7260D8834005FA143 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				244F59BA260D88EB005FA143 /* Cells */,
+				244F598D260CE3AF005FA143 /* ViewController.swift */,
+				244F598F260CE3AF005FA143 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		244F59B8260D884E005FA143 /* Team Detail */ = {
+			isa = PBXGroup;
+			children = (
+				244F59D5260DAE19005FA143 /* TeamDetail.storyboard */,
+			);
+			path = "Team Detail";
+			sourceTree = "<group>";
+		};
+		244F59B9260D885C005FA143 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		244F59BA260D88EB005FA143 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				244F59BB260D8928005FA143 /* TeamCollectionViewCell.swift */,
+				244F59BC260D8928005FA143 /* TeamCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5CC7CACC15784DF9D8CA914A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A58B7D84227ACEFC87FDD7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7893B394F7F7F2C8108A4BCF /* Pods-platzi-test.debug.xcconfig */,
+				F87D0CC461F5226ECCF752CC /* Pods-platzi-test.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 244F599A260CE3B6005FA143 /* Build configuration list for PBXNativeTarget "platzi-test" */;
 			buildPhases = (
+				3437D40788EF3FE3AE242A01 /* [CP] Check Pods Manifest.lock */,
 				244F5982260CE3AF005FA143 /* Sources */,
 				244F5983260CE3AF005FA143 /* Frameworks */,
 				244F5984260CE3AF005FA143 /* Resources */,
+				7A9A9F786DAB2EB00E9445A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,21 +267,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				244F5996260CE3B6005FA143 /* LaunchScreen.storyboard in Resources */,
+				244F59BE260D8928005FA143 /* TeamCollectionViewCell.xib in Resources */,
 				244F5993260CE3B6005FA143 /* Assets.xcassets in Resources */,
+				244F59D6260DAE19005FA143 /* TeamDetail.storyboard in Resources */,
 				244F5991260CE3AF005FA143 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3437D40788EF3FE3AE242A01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-platzi-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A9A9F786DAB2EB00E9445A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-platzi-test/Pods-platzi-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-platzi-test/Pods-platzi-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-platzi-test/Pods-platzi-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		244F5982260CE3AF005FA143 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244F59C1260D9294005FA143 /* CellIds.swift in Sources */,
+				244F59BD260D8928005FA143 /* TeamCollectionViewCell.swift in Sources */,
+				244F59DC260E1884005FA143 /* Referee.swift in Sources */,
+				244F59AF260D8571005FA143 /* Team.swift in Sources */,
+				244F59B2260D85BC005FA143 /* Area.swift in Sources */,
+				244F59B5260D85C6005FA143 /* Winner.swift in Sources */,
 				244F598E260CE3AF005FA143 /* ViewController.swift in Sources */,
 				244F598A260CE3AF005FA143 /* AppDelegate.swift in Sources */,
+				244F59DF260E1917005FA143 /* Score.swift in Sources */,
+				244F59AC260D83D5005FA143 /* Season.swift in Sources */,
+				244F59D9260E182B005FA143 /* Match.swift in Sources */,
 				244F598C260CE3AF005FA143 /* SceneDelegate.swift in Sources */,
+				244F59A8260D821D005FA143 /* Competition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +479,7 @@
 		};
 		244F599B260CE3B6005FA143 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7893B394F7F7F2C8108A4BCF /* Pods-platzi-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +499,7 @@
 		};
 		244F599C260CE3B6005FA143 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87D0CC461F5226ECCF752CC /* Pods-platzi-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
