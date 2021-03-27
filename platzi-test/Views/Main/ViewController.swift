@@ -23,7 +23,11 @@ class ViewController: UIViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        
+        if segue.identifier == "segueToDetail", let teamDetailViewController = segue.destination as? TeamDetailViewController{
+            
+            //teamsCollectionView
+        }
     }
 
 }
@@ -32,7 +36,7 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: "segueToDetail", sender: nil)
     }
 }
 

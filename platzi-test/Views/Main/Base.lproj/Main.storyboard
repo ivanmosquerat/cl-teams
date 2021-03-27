@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="93.75"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--TeamDetail-->
         <scene sceneID="3L9-k6-9X3">
             <objects>
-                <viewControllerPlaceholder id="YQg-nf-07s" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TeamDetail" id="YQg-nf-07s" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hKp-UZ-geH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaV-UK-1He" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

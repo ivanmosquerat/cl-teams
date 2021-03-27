@@ -53,7 +53,7 @@ extension TeamDetailViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.setupCellWith(match: matchesDataSource[indexPath.row])
+        //cell.setupCellWith(match: matchesDataSource[indexPath.row])
         
         return cell
     }
