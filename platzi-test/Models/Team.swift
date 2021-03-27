@@ -8,9 +8,9 @@
 import Foundation
 
 struct Team {
-    let id: Int
+    let id: Int?
     let area: Area?
-    let name: String
+    let name: String?
     let shortName: String?
     let tla: String?
     let crestUrl:String?

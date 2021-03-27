@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Team Detail View Controller-->
         <scene sceneID="JWb-88-Qfk">
             <objects>
-                <viewController id="Uly-TT-Hmr" sceneMemberID="viewController">
+                <viewController id="Uly-TT-Hmr" customClass="TeamDetailViewController" customModule="platzi_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nza-BU-j9L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,6 +164,15 @@
                             <constraint firstItem="QyX-Hc-ced" firstAttribute="trailing" secondItem="8nT-Sg-qJl" secondAttribute="trailing" id="yOO-ts-Gp4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorsContainerView" destination="NbZ-HU-614" id="PiH-k9-bIw"/>
+                        <outlet property="matchesCollectionView" destination="PmC-cr-Qkl" id="rdu-ZF-0Af"/>
+                        <outlet property="teamAreaLabel" destination="Ip6-qh-HMc" id="mD5-XG-VuN"/>
+                        <outlet property="teamImageView" destination="GeM-a1-AOa" id="ibd-od-aVG"/>
+                        <outlet property="teamNameLabel" destination="nhU-HR-whs" id="pTv-zQ-jod"/>
+                        <outlet property="teamVenueLabel" destination="NFB-7f-mDo" id="Res-z5-eo0"/>
+                        <outlet property="venueContainerView" destination="tEk-Ly-RpU" id="80V-g2-8Ot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtK-sG-A5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

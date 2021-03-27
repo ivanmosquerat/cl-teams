@@ -27,6 +27,9 @@
 		244F59DF260E1917005FA143 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59DE260E1917005FA143 /* Score.swift */; };
 		244F59E4260E337A005FA143 /* MatchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59E2260E337A005FA143 /* MatchCollectionViewCell.swift */; };
 		244F59E5260E337A005FA143 /* MatchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F59E3260E337A005FA143 /* MatchCollectionViewCell.xib */; };
+		244F59E9260ECB22005FA143 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59E8260ECB22005FA143 /* TeamDetailViewController.swift */; };
+		244F59EC260F0D66005FA143 /* MainModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59EB260F0D66005FA143 /* MainModelView.swift */; };
+		244F59EF260F0DD6005FA143 /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59EE260F0DD6005FA143 /* MatchViewModel.swift */; };
 		FB1F04703F97EB84FF98CF52 /* Pods_platzi_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 		244F59DE260E1917005FA143 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		244F59E2260E337A005FA143 /* MatchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCollectionViewCell.swift; sourceTree = "<group>"; };
 		244F59E3260E337A005FA143 /* MatchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCollectionViewCell.xib; sourceTree = "<group>"; };
+		244F59E8260ECB22005FA143 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
+		244F59EB260F0D66005FA143 /* MainModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModelView.swift; sourceTree = "<group>"; };
+		244F59EE260F0DD6005FA143 /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		7893B394F7F7F2C8108A4BCF /* Pods-platzi-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.debug.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.debug.xcconfig"; sourceTree = "<group>"; };
 		D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_platzi_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87D0CC461F5226ECCF752CC /* Pods-platzi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.release.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 		244F59A3260CE4D3005FA143 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				244F59EB260F0D66005FA143 /* MainModelView.swift */,
+				244F59EE260F0DD6005FA143 /* MatchViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			children = (
 				244F59E1260E32A1005FA143 /* Cells */,
 				244F59D5260DAE19005FA143 /* TeamDetail.storyboard */,
+				244F59E8260ECB22005FA143 /* TeamDetailViewController.swift */,
 			);
 			path = "Team Detail";
 			sourceTree = "<group>";
@@ -347,11 +356,14 @@
 				244F598E260CE3AF005FA143 /* ViewController.swift in Sources */,
 				244F598A260CE3AF005FA143 /* AppDelegate.swift in Sources */,
 				244F59DF260E1917005FA143 /* Score.swift in Sources */,
+				244F59EF260F0DD6005FA143 /* MatchViewModel.swift in Sources */,
 				244F59AC260D83D5005FA143 /* Season.swift in Sources */,
+				244F59E9260ECB22005FA143 /* TeamDetailViewController.swift in Sources */,
 				244F59D9260E182B005FA143 /* Match.swift in Sources */,
 				244F598C260CE3AF005FA143 /* SceneDelegate.swift in Sources */,
 				244F59E4260E337A005FA143 /* MatchCollectionViewCell.swift in Sources */,
 				244F59A8260D821D005FA143 /* Competition.swift in Sources */,
+				244F59EC260F0D66005FA143 /* MainModelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

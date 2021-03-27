@@ -19,8 +19,8 @@ struct Match {
     let lastUpdated: String
     let odds: Odds?
     let score: Score
-    let homeTeam: Team
-    let awayTeam: Team
+    let homeTeam: Team?
+    let awayTeam: Team?
     let referees: Referee
     
     static var `default` : Match {

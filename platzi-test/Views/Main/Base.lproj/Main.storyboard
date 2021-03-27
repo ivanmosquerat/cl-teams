@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" title="Champions League" id="pEJ-n4-8dt"/>
                     <connections>
                         <outlet property="teamsCollectionView" destination="CiL-2Q-zot" id="67q-GY-eIY"/>
-                        <segue destination="YQg-nf-07s" kind="show" id="ZCM-7g-gpM"/>
+                        <segue destination="YQg-nf-07s" kind="show" identifier="segueToDetail" id="ZCM-7g-gpM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

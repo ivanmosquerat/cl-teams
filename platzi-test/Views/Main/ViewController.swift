@@ -21,13 +21,22 @@ class ViewController: UIViewController {
         teamsCollectionView.register(UINib(nibName: Cells.teamCollectionViewCell.id, bundle: nil), forCellWithReuseIdentifier: Cells.teamCollectionViewCell.id)
     }
 
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
 
 }
 
 // MARK: - UICollectionViewDelegate
-extension ViewController: UICollectionViewDelegate{}
+extension ViewController: UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+}
 
-
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
