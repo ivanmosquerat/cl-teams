@@ -71,7 +71,7 @@ extension ViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.setupCellWith(name: viewModel.item(at: indexPath).name ?? "", flag: "")
+        cell.setupCellWith(name: viewModel.item(at: indexPath).name ?? "", flag: viewModel.item(at: indexPath).crestUrl ?? "")
         
         return cell
         

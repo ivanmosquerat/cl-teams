@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+import SVGKit
 
 class TeamCollectionViewCell: UICollectionViewCell {
     
@@ -16,14 +18,12 @@ class TeamCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-     
-        flagImageView.clipsToBounds = true
-        flagImageView.layer.cornerRadius = flagImageView.frame.size.height / 2
-       
     }
     
     func setupCellWith(name:String, flag:String){
         nameLabel.text = name
+        debugPrint(flag)
+        flagImageView.kf.setImage(with: URL(string: flag), options: [.processor(SVGImgProcessor())])
     }
 
 }
