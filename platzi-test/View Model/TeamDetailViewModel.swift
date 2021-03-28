@@ -20,6 +20,8 @@ class TeamDetailViewModel {
     
     
     init(){
+        
+        // TODO: FIX FOR EACH TEAM
         getMatches(url: "https://api.football-data.org/v2/teams/\(delegate?.getTeamId() ?? 1)/matches?limit=20")
     }
     
