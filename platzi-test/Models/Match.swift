@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Match {
+struct Match: Codable {
     let id: Int
     let competition: Competition
     let season: Season
@@ -28,7 +28,7 @@ struct Match {
     }
 }
 
-struct Odds {
+struct Odds: Codable {
     let msg: String?
     
     static var `default`: Odds{

@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct Season {
+struct Season: Codable {
     let id: Int
     let startDate: String
     let endDate: String
-    let currentMatchday: Int
-    let winner: Winner
+    let currentMatchday: Int?
+    let winner: Winner?
     
     static var `default`: Season{
         .init(id: 0, startDate: "", endDate: "", currentMatchday: 0, winner: Winner.default)
     }
 }
 
-struct Winner {
+struct Winner: Codable {
     let id: Int
     let name: String
     let shortName: String

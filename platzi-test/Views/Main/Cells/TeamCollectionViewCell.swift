@@ -23,7 +23,7 @@ class TeamCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCellWith(name:String, flag:String){
-        
+        nameLabel.text = name
     }
 
 }

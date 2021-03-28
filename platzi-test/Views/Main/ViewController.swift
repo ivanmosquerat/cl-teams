@@ -10,12 +10,13 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    
+    private var viewModel = MainModelView()
     // MARK: - Outlets
     @IBOutlet weak var teamsCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         teamsCollectionView.delegate = self
         teamsCollectionView.dataSource = self
         teamsCollectionView.register(UINib(nibName: Cells.teamCollectionViewCell.id, bundle: nil), forCellWithReuseIdentifier: Cells.teamCollectionViewCell.id)
@@ -30,6 +31,12 @@ class ViewController: UIViewController {
         }
     }
 
+}
+
+extension ViewController: MainModelViewDelegate{
+    func reloadData() {
+        teamsCollectionView.reloadData()
+    }
 }
 
 // MARK: - UICollectionViewDelegate
@@ -53,7 +60,8 @@ extension ViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 32
+        debugPrint(viewModel.numberOfTeams)
+        return viewModel.numberOfTeams
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,7 +71,7 @@ extension ViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.setupCellWith(name: "Uruguay", flag: "")
+        cell.setupCellWith(name: viewModel.item(at: indexPath).name ?? "", flag: "")
         
         return cell
         

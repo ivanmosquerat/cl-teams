@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team {
+struct Team: Codable {
     let id: Int?
     let area: Area?
     let name: String?

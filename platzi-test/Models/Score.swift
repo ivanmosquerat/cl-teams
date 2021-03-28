@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Score{
+struct Score: Codable{
     let winner: String
     let duration: String
     let fullTime: TimeSection
@@ -22,7 +22,7 @@ struct Score{
     
 }
 
-struct TimeSection {
+struct TimeSection: Codable {
     let homeTeam: Int?
     let awayTeam: Int?
     
