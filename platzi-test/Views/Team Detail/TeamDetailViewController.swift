@@ -11,6 +11,8 @@ class TeamDetailViewController: UIViewController {
     
     // MARK: - Properties
     private var matchesDataSource: [Match] = []
+    private var viewModel = TeamDetailViewModel()
+    var team: Team = Team.default
     
     // MARK: - Outlets
     @IBOutlet weak var teamImageView: UIImageView!
@@ -25,11 +27,34 @@ class TeamDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.delegate = self
         matchesCollectionView.delegate = self
         matchesCollectionView.dataSource = self
         matchesCollectionView.register(UINib(nibName: Cells.matchCollectionViewCell.id, bundle: nil), forCellWithReuseIdentifier: Cells.matchCollectionViewCell.id)
         
+        setupUI()
     }
+    
+    func setupUI(){
+        teamNameLabel.text = team.name
+        teamImageView.kf.setImage(with: URL(string: team.crestUrl ?? ""), options: [.processor(SVGImgProcessor())])
+        teamAreaLabel.text = team.area?.name
+        teamVenueLabel.text = team.venue
+        
+    }
+    
+}
+
+// MARK: - ViewModelDelegate
+extension TeamDetailViewController: TeamDetailViewModelDelegate{
+    func getTeamId() -> Int {
+        return team.id ?? 1
+    }
+    
+    func reloadData() {
+        matchesCollectionView.reloadData()
+    }
+    
     
 }
 
@@ -43,7 +68,7 @@ extension TeamDetailViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return viewModel.numberOfMatches
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -53,7 +78,7 @@ extension TeamDetailViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        //cell.setupCellWith(match: matchesDataSource[indexPath.row])
+        cell.setupCellWith(match: viewModel.item(at: indexPath))
         
         return cell
     }

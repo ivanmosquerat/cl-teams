@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     private var viewModel = MainModelView()
+    private var teamSelected: Team = Team.default
     // MARK: - Outlets
     @IBOutlet weak var teamsCollectionView: UICollectionView!
 
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
         
         if segue.identifier == "segueToDetail", let teamDetailViewController = segue.destination as? TeamDetailViewController{
             
-            //teamsCollectionView
+            teamDetailViewController.team = teamSelected
         }
     }
 
@@ -43,6 +44,8 @@ extension ViewController: MainModelViewDelegate{
 extension ViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        teamSelected = viewModel.item(at: indexPath)
         performSegue(withIdentifier: "segueToDetail", sender: nil)
     }
 }
@@ -60,7 +63,6 @@ extension ViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        debugPrint(viewModel.numberOfTeams)
         return viewModel.numberOfTeams
     }
     

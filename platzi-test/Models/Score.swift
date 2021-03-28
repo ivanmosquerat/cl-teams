@@ -8,12 +8,12 @@
 import Foundation
 
 struct Score: Codable{
-    let winner: String
-    let duration: String
-    let fullTime: TimeSection
-    let halfTime: TimeSection
-    let extraTime: TimeSection
-    let penalties: TimeSection
+    let winner: String?
+    let duration: String?
+    let fullTime: TimeSection?
+    let halfTime: TimeSection?
+    let extraTime: TimeSection?
+    let penalties: TimeSection?
     
 
     static var `default`: Score {

@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias ResponseHandler = ((_ success: Bool, _ error: Error) -> Void)
-
 protocol MainModelViewDelegate {
     func reloadData()
 }
@@ -50,7 +48,7 @@ class MainModelView {
                 return
             }
             
-            let dataFromJson = try! JSONDecoder().decode(TeamRequest.self, from: data)
+            let dataFromJson = try! JSONDecoder().decode(TeamResponse.self, from: data)
             
             self.championLeagueTeams = dataFromJson.teams
             
@@ -60,8 +58,6 @@ class MainModelView {
         }
         
         task.resume()
-        
-        
         
     }
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TeamRequest: Codable {
+struct TeamResponse: Codable {
     let count: Int
     //let filters:
     let competition: Competition

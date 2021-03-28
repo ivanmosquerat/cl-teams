@@ -24,9 +24,9 @@ class MatchCollectionViewCell: UICollectionViewCell {
     
     func setupCellWith(match: Match){
         homeTeamNameLabel.text = match.homeTeam?.name ?? "Team not available"
-        scoreHomeLabel.text = "\(match.score.fullTime.homeTeam ?? 0)"
+        scoreHomeLabel.text = "\(match.score.fullTime?.homeTeam ?? 0)"
         awayTeamNameLabel.text = match.awayTeam?.name ?? "Team not available"
-        scoreAwayLabel.text = "\(match.score.fullTime.awayTeam ?? 0)"
+        scoreAwayLabel.text = "\(match.score.fullTime?.awayTeam ?? 0)"
     }
 
 }

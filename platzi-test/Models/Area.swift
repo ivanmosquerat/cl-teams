@@ -9,10 +9,11 @@ import Foundation
 
 
 struct Area: Codable{
-    let id: Int
+    let id: Int?
     let name: String
+    let code: String?
     
     static var `default`: Area{
-        .init(id: 0, name: "")
+        .init(id: 0, name: "", code: "")
     }
 }
