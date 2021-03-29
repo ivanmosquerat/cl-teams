@@ -33,6 +33,7 @@
 		244F59FF2610CD37005FA143 /* SvgImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59FE2610CD37005FA143 /* SvgImageProcessor.swift */; };
 		244F5A022610D9C6005FA143 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F5A012610D9C6005FA143 /* MatchResponse.swift */; };
 		244F5A242611D2AE005FA143 /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F5A232611D2AE005FA143 /* EmptyState.xib */; };
+		244F5A2F2611FE89005FA143 /* EmptyViewMatches.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F5A2E2611FE89005FA143 /* EmptyViewMatches.xib */; };
 		FB1F04703F97EB84FF98CF52 /* Pods_platzi_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		244F59FE2610CD37005FA143 /* SvgImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SvgImageProcessor.swift; sourceTree = "<group>"; };
 		244F5A012610D9C6005FA143 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
 		244F5A232611D2AE005FA143 /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
+		244F5A2E2611FE89005FA143 /* EmptyViewMatches.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewMatches.xib; sourceTree = "<group>"; };
 		7893B394F7F7F2C8108A4BCF /* Pods-platzi-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.debug.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.debug.xcconfig"; sourceTree = "<group>"; };
 		D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_platzi_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87D0CC461F5226ECCF752CC /* Pods-platzi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.release.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				244F59E1260E32A1005FA143 /* Cells */,
 				244F59D5260DAE19005FA143 /* TeamDetail.storyboard */,
 				244F59E8260ECB22005FA143 /* TeamDetailViewController.swift */,
+				244F5A2E2611FE89005FA143 /* EmptyViewMatches.xib */,
 			);
 			path = "Team Detail";
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				244F59BE260D8928005FA143 /* TeamCollectionViewCell.xib in Resources */,
 				244F59E5260E337A005FA143 /* MatchCollectionViewCell.xib in Resources */,
 				244F5993260CE3B6005FA143 /* Assets.xcassets in Resources */,
+				244F5A2F2611FE89005FA143 /* EmptyViewMatches.xib in Resources */,
 				244F5A242611D2AE005FA143 /* EmptyState.xib in Resources */,
 				244F59D6260DAE19005FA143 /* TeamDetail.storyboard in Resources */,
 				244F5991260CE3AF005FA143 /* Main.storyboard in Resources */,

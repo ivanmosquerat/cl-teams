@@ -10,6 +10,14 @@ import UIKit
 class TeamDetailViewController: UIViewController {
     
     // MARK: - Properties
+    private lazy var emptyView: UIView = {
+        guard let view = Bundle.main.loadNibNamed("EmptyViewMatches", owner: nil, options: [:])?.first as? UIView else{
+            
+            return UIView()
+        }
+        
+        return view
+    }()
     private var matchesDataSource: [Match] = []
     private var viewModel = TeamDetailViewModel()
     var team: Team = Team.default
@@ -23,8 +31,18 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var colorsContainerView: UIView!
     @IBOutlet weak var venueContainerView: UIView!
     @IBOutlet weak var colorsStackView: UIStackView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var teamLinkButtom: UIButton!
     
-
+    // MARK: - Actions
+    @IBAction func openTeamLink(_ sender: Any) {
+        if let url = URL(string: team.website ?? ""){
+            
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +60,7 @@ class TeamDetailViewController: UIViewController {
         teamImageView.kf.setImage(with: URL(string: team.crestUrl ?? ""), options: [.processor(SVGImgProcessor())])
         teamAreaLabel.text = team.area?.name
         teamVenueLabel.text = team.venue
+        teamLinkButtom.setTitle(team.website ?? "Website not available", for: .normal) 
         
         createColorsViews()
     }
@@ -72,6 +91,8 @@ class TeamDetailViewController: UIViewController {
 extension TeamDetailViewController: TeamDetailViewModelDelegate{
     
     func reloadData() {
+        activityIndicator.stopAnimating()
+        matchesCollectionView.backgroundView = viewModel.numberOfMatches == 0 ? emptyView : nil
         matchesCollectionView.reloadData()
     }
     
