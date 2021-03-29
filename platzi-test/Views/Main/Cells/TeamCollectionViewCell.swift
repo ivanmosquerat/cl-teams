@@ -22,7 +22,6 @@ class TeamCollectionViewCell: UICollectionViewCell {
     
     func setupCellWith(name:String, flag:String){
         nameLabel.text = name
-        debugPrint(flag)
         flagImageView.kf.setImage(with: URL(string: flag), options: [.processor(SVGImgProcessor())])
     }
 

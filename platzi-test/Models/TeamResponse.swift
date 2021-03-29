@@ -8,7 +8,7 @@
 import Foundation
 
 struct TeamResponse: Codable {
-    let count: Int
+    let count: Int?
     //let filters:
     let competition: Competition
     let season: Season

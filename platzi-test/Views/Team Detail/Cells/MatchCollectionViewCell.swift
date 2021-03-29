@@ -23,6 +23,21 @@ class MatchCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCellWith(match: Match){
+        
+        if match.score.winner == "HOME_TEAM"{
+            homeTeamNameLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+            scoreHomeLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+            awayTeamNameLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
+            scoreAwayLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
+        }
+        
+        if match.score.winner == "AWAY_TEAM" {
+            homeTeamNameLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
+            scoreHomeLabel.font = UIFont.systemFont(ofSize: 17, weight: .light)
+            awayTeamNameLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+            scoreAwayLabel.font = UIFont.systemFont(ofSize: 17, weight: .bold)
+        }
+        
         homeTeamNameLabel.text = match.homeTeam?.name ?? "Team not available"
         scoreHomeLabel.text = "\(match.score.fullTime?.homeTeam ?? 0)"
         awayTeamNameLabel.text = match.awayTeam?.name ?? "Team not available"

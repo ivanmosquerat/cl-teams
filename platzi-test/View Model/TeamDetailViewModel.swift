@@ -9,29 +9,21 @@ import UIKit
 
 protocol TeamDetailViewModelDelegate {
     func reloadData()
-    
-    func getTeamId() -> Int
 }
 
 class TeamDetailViewModel {
     
     private var matches: [Match] = []
     var delegate: TeamDetailViewModelDelegate?
-    
-    
-    init(){
-        
-        // TODO: FIX FOR EACH TEAM
-        getMatches(url: "https://api.football-data.org/v2/teams/\(delegate?.getTeamId() ?? 1)/matches?limit=20")
-    }
-    
+   
     var numberOfMatches: Int{
         return matches.count
     }
     
-    func getMatches(url: String){
+    func getMatches(teamId: Int){
         
-        guard let baseUrl = URL(string: url) else {
+        guard let baseUrl = URL(string: "https://api.football-data.org/v2/teams/\(teamId)/matches?limit=20") else
+        {
             return
         }
         

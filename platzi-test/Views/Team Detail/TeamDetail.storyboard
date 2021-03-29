@@ -55,17 +55,17 @@
                                                     <constraint firstAttribute="height" constant="150" id="3vr-Bg-yl7"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gGk-DH-uDA">
-                                                    <size key="itemSize" width="195" height="130"/>
+                                                    <size key="itemSize" width="230" height="130"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TNb-oV-ULI">
-                                                        <rect key="frame" x="0.0" y="10" width="195" height="130"/>
+                                                        <rect key="frame" x="0.0" y="10" width="230" height="130"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f5r-Hd-VDc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="195" height="130"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="130"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
@@ -87,8 +87,8 @@
                                                             <constraint firstAttribute="height" constant="50" id="Izl-nL-jDW"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Santiago Bernabeu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFB-7f-mDo">
-                                                        <rect key="frame" x="70" y="28" width="167" height="24"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Santiago Bernabeu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFB-7f-mDo">
+                                                        <rect key="frame" x="70" y="28" width="302" height="24"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -101,6 +101,7 @@
                                                     <constraint firstItem="NFB-7f-mDo" firstAttribute="centerY" secondItem="tEk-Ly-RpU" secondAttribute="centerY" id="DOk-2U-pbj"/>
                                                     <constraint firstItem="1vL-KT-swz" firstAttribute="centerY" secondItem="tEk-Ly-RpU" secondAttribute="centerY" id="hAR-ed-Gwc"/>
                                                     <constraint firstAttribute="height" constant="80" id="hYY-fs-dcq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NFB-7f-mDo" secondAttribute="trailing" constant="10" id="jcH-IV-z99"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -116,10 +117,18 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbZ-HU-614">
                                                 <rect key="frame" x="16" y="665.5" width="382" height="80"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Yap-BM-Pmy">
+                                                        <rect key="frame" x="16" y="10" width="350" height="60"/>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 <color key="tintColor" systemColor="systemGray6Color"/>
                                                 <constraints>
+                                                    <constraint firstItem="Yap-BM-Pmy" firstAttribute="leading" secondItem="NbZ-HU-614" secondAttribute="leading" constant="16" id="WbM-cy-N34"/>
+                                                    <constraint firstItem="Yap-BM-Pmy" firstAttribute="top" secondItem="NbZ-HU-614" secondAttribute="top" constant="10" id="i4v-Dm-2Tw"/>
                                                     <constraint firstAttribute="height" constant="80" id="rfA-ig-zpn"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Yap-BM-Pmy" secondAttribute="bottom" constant="10" id="uYc-wJ-3fV"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -178,6 +187,7 @@
                     </view>
                     <connections>
                         <outlet property="colorsContainerView" destination="NbZ-HU-614" id="PiH-k9-bIw"/>
+                        <outlet property="colorsStackView" destination="Yap-BM-Pmy" id="D6Y-mD-83y"/>
                         <outlet property="matchesCollectionView" destination="PmC-cr-Qkl" id="rdu-ZF-0Af"/>
                         <outlet property="teamAreaLabel" destination="Ip6-qh-HMc" id="mD5-XG-VuN"/>
                         <outlet property="teamImageView" destination="GeM-a1-AOa" id="ibd-od-aVG"/>

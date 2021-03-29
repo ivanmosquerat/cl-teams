@@ -22,6 +22,7 @@ class TeamDetailViewController: UIViewController {
     @IBOutlet weak var teamVenueLabel: UILabel!
     @IBOutlet weak var colorsContainerView: UIView!
     @IBOutlet weak var venueContainerView: UIView!
+    @IBOutlet weak var colorsStackView: UIStackView!
     
 
     override func viewDidLoad() {
@@ -32,6 +33,7 @@ class TeamDetailViewController: UIViewController {
         matchesCollectionView.dataSource = self
         matchesCollectionView.register(UINib(nibName: Cells.matchCollectionViewCell.id, bundle: nil), forCellWithReuseIdentifier: Cells.matchCollectionViewCell.id)
         
+        viewModel.getMatches(teamId: team.id ?? 1)
         setupUI()
     }
     
@@ -41,20 +43,37 @@ class TeamDetailViewController: UIViewController {
         teamAreaLabel.text = team.area?.name
         teamVenueLabel.text = team.venue
         
+        createColorsViews()
+    }
+    
+    func createColorsViews(){
+        
+        for color in team.colors{
+    
+            let view = UIView()
+            view.frame.size = CGSize(width: 50, height: 50)
+            view.backgroundColor = color
+            view.layer.cornerRadius = 12
+            
+            colorsStackView.addArrangedSubview(view)
+            
+            view.translatesAutoresizingMaskIntoConstraints = false
+            let widthConstraint = NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 50)
+            let heightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 50)
+            
+            NSLayoutConstraint.activate([widthConstraint, heightConstraint])
+            
+        }
     }
     
 }
 
 // MARK: - ViewModelDelegate
 extension TeamDetailViewController: TeamDetailViewModelDelegate{
-    func getTeamId() -> Int {
-        return team.id ?? 1
-    }
     
     func reloadData() {
         matchesCollectionView.reloadData()
     }
-    
     
 }
 

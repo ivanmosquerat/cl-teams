@@ -17,7 +17,6 @@
 		244F59AC260D83D5005FA143 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59AB260D83D5005FA143 /* Season.swift */; };
 		244F59AF260D8571005FA143 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59AE260D8571005FA143 /* Team.swift */; };
 		244F59B2260D85BC005FA143 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59B1260D85BC005FA143 /* Area.swift */; };
-		244F59B5260D85C6005FA143 /* Winner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59B4260D85C6005FA143 /* Winner.swift */; };
 		244F59BD260D8928005FA143 /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59BB260D8928005FA143 /* TeamCollectionViewCell.swift */; };
 		244F59BE260D8928005FA143 /* TeamCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F59BC260D8928005FA143 /* TeamCollectionViewCell.xib */; };
 		244F59C1260D9294005FA143 /* CellIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F59C0260D9294005FA143 /* CellIds.swift */; };
@@ -49,7 +48,6 @@
 		244F59AB260D83D5005FA143 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		244F59AE260D8571005FA143 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		244F59B1260D85BC005FA143 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
-		244F59B4260D85C6005FA143 /* Winner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winner.swift; sourceTree = "<group>"; };
 		244F59BB260D8928005FA143 /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 		244F59BC260D8928005FA143 /* TeamCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCollectionViewCell.xib; sourceTree = "<group>"; };
 		244F59C0260D9294005FA143 /* CellIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIds.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				244F59AB260D83D5005FA143 /* Season.swift */,
 				244F59AE260D8571005FA143 /* Team.swift */,
 				244F59B1260D85BC005FA143 /* Area.swift */,
-				244F59B4260D85C6005FA143 /* Winner.swift */,
 				244F59D8260E182B005FA143 /* Match.swift */,
 				244F59DB260E1884005FA143 /* Referee.swift */,
 				244F59DE260E1917005FA143 /* Score.swift */,
@@ -361,7 +358,6 @@
 				244F59DC260E1884005FA143 /* Referee.swift in Sources */,
 				244F59AF260D8571005FA143 /* Team.swift in Sources */,
 				244F59B2260D85BC005FA143 /* Area.swift in Sources */,
-				244F59B5260D85C6005FA143 /* Winner.swift in Sources */,
 				244F598E260CE3AF005FA143 /* ViewController.swift in Sources */,
 				244F598A260CE3AF005FA143 /* AppDelegate.swift in Sources */,
 				244F59DF260E1917005FA143 /* Score.swift in Sources */,

@@ -5,7 +5,7 @@
 //  Created by Ivan Mosquera on 26/3/21.
 //
 
-import Foundation
+import UIKit
 
 struct Team: Codable {
     let id: Int?
@@ -25,6 +25,18 @@ struct Team: Codable {
     
     static var `default`: Team{
         .init(id: 0, area: Area.default, name: "", shortName: "", tla: "", crestUrl: "", address: "", phone: "", website: "", email: "", founded: 0, clubColors: "", venue: "", lastUpdated: "")
+    }
+    
+    var colors: [UIColor]{
+        let strColors = clubColors ?? ""
+        let arrayStrColors = strColors.components(separatedBy: " / ")
+        var arrayColors: [UIColor] = []
+        
+        arrayStrColors.forEach{str in
+            arrayColors.append(UIColor( named: str) ?? UIColor.black)
+        }
+        
+        return arrayColors
     }
     
 }
