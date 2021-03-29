@@ -38,9 +38,11 @@ class MainModelView {
         
         let task = URLSession.shared.dataTask(with: url){ (data, _, error) in
             
-            if let error = error {
-                //handler
-                debugPrint(error)
+            if error != nil {
+                self.championLeagueTeams = []
+                DispatchQueue.main.async {
+                    self.delegate?.reloadData()
+                }
                 return
             }
             
@@ -63,6 +65,11 @@ class MainModelView {
     
     func item(at indexPath: IndexPath) -> Team{
         return championLeagueTeams[indexPath.row]
+    }
+    
+    func reload(){
+        championLeagueTeams.removeAll()
+        getChampionsLeagueTeams(url: "https://api.football-data.org/v2/competitions/CL/teams")
     }
     
 }

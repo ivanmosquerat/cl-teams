@@ -12,30 +12,57 @@ class ViewController: UIViewController {
     // MARK: - Properties
     private var viewModel = MainModelView()
     private var teamSelected: Team = Team.default
+    private lazy var  emptyView: UIView = {
+        guard let view = Bundle.main.loadNibNamed("EmptyState", owner: nil, options: [:])?.first as? UIView else{
+            
+            return UIView()
+        }
+        
+        return view
+    }()
+ 
     // MARK: - Outlets
     @IBOutlet weak var teamsCollectionView: UICollectionView!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
         teamsCollectionView.delegate = self
         teamsCollectionView.dataSource = self
         teamsCollectionView.register(UINib(nibName: Cells.teamCollectionViewCell.id, bundle: nil), forCellWithReuseIdentifier: Cells.teamCollectionViewCell.id)
+        
+        let reloadButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(reloadCompetitionData))
+        
+        
+        navigationItem.rightBarButtonItems = [reloadButton]
+        
     }
+    
+    // MARK: - Methods
+    @objc func reloadCompetitionData(){
+        activityIndicator.startAnimating()
+        viewModel.reload()
+    }
+    
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "segueToDetail", let teamDetailViewController = segue.destination as? TeamDetailViewController{
-            
             teamDetailViewController.team = teamSelected
         }
     }
 
 }
 
+
+// MARK: - MainModelViewDelegate
 extension ViewController: MainModelViewDelegate{
     func reloadData() {
+        
+        activityIndicator.stopAnimating()
+        teamsCollectionView.backgroundView = viewModel.numberOfTeams == 0 ? emptyView : nil
         teamsCollectionView.reloadData()
     }
 }

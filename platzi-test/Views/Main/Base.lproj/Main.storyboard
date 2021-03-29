@@ -27,6 +27,11 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="b78-bp-ngy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,6 +44,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Champions League" id="pEJ-n4-8dt"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="b78-bp-ngy" id="WSx-Fe-rVv"/>
                         <outlet property="teamsCollectionView" destination="CiL-2Q-zot" id="67q-GY-eIY"/>
                         <segue destination="YQg-nf-07s" kind="show" identifier="segueToDetail" id="ZCM-7g-gpM"/>
                     </connections>

@@ -29,14 +29,18 @@ class TeamDetailViewModel {
         
         var urlRequest = URLRequest(url: baseUrl)
         urlRequest.setValue("c2903c8861b04090ab8856b71cdcb6d1", forHTTPHeaderField: "X-Auth-Token")
-        
-        let task = URLSession.shared.dataTask(with: urlRequest){ (data, _ , error) in
+    
+        let task = URLSession.shared.dataTask(with: urlRequest){ (data, response , error) in
             
-            if let error = error{
+            if let error = error as NSError?,  error.code == NSURLErrorNotConnectedToInternet{
                 
-                debugPrint(error)
+                self.matches = []
+                DispatchQueue.main.async {
+                    self.delegate?.reloadData()
+                }
                 return
             }
+            
             
             guard let data = data else {
                 return
