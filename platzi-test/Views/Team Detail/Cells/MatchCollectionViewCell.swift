@@ -22,6 +22,8 @@ class MatchCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
+    
+    
     func setupCellWith(match: Match){
         
         if match.score.winner == "HOME_TEAM"{

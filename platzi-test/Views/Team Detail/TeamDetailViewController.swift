@@ -20,6 +20,7 @@ class TeamDetailViewController: UIViewController {
     }()
     private var matchesDataSource: [Match] = []
     private var viewModel = TeamDetailViewModel()
+    private var matchSelected: Match = Match.default
     var team: Team = Team.default
     
     // MARK: - Outlets
@@ -53,6 +54,7 @@ class TeamDetailViewController: UIViewController {
         
         viewModel.getMatches(teamId: team.id ?? 1)
         setupUI()
+        
     }
     
     func setupUI(){
@@ -65,6 +67,8 @@ class TeamDetailViewController: UIViewController {
         createColorsViews()
     }
     
+    
+    /// <#Description#>
     func createColorsViews(){
         
         for color in team.colors{
@@ -85,7 +89,20 @@ class TeamDetailViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueToMatchDetail"{
+            
+            let navigation: UINavigationController = segue.destination as! UINavigationController
+            var matchDetailViewController = DetailMatchViewController.init()
+            matchDetailViewController = (navigation.viewControllers.first as? DetailMatchViewController)!
+            
+            matchDetailViewController.match = matchSelected
+        }
+    }
+    
 }
+
 
 // MARK: - ViewModelDelegate
 extension TeamDetailViewController: TeamDetailViewModelDelegate{
@@ -100,7 +117,13 @@ extension TeamDetailViewController: TeamDetailViewModelDelegate{
 
 // MARK: - UICollectionViewDelegate
 extension TeamDetailViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        debugPrint(viewModel.item(at: indexPath).awayTeam?.name)
+        matchSelected = viewModel.item(at: indexPath)
+        debugPrint(matchSelected.awayTeam?.name)
+        self.performSegue(withIdentifier: "segueToMatchDetail", sender: nil)
+    }
 }
 
 // MARK: - UICollectionViewDataSource

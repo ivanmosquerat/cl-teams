@@ -65,7 +65,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TNb-oV-ULI">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TNb-oV-ULI" customClass="TeamCollectionViewCell" customModule="platzi_test" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="10" width="230" height="130"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f5r-Hd-VDc">
@@ -249,11 +249,22 @@
                         <outlet property="teamNameLabel" destination="nhU-HR-whs" id="pTv-zQ-jod"/>
                         <outlet property="teamVenueLabel" destination="NFB-7f-mDo" id="Res-z5-eo0"/>
                         <outlet property="venueContainerView" destination="tEk-Ly-RpU" id="80V-g2-8Ot"/>
+                        <segue destination="Paa-Rc-Xwd" kind="presentation" identifier="segueToMatchDetail" id="yOM-x1-4tm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtK-sG-A5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="127.53623188405798" y="136.60714285714286"/>
+        </scene>
+        <!--DetailMatch-->
+        <scene sceneID="bAN-6M-f7I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailMatch" id="Paa-Rc-Xwd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="F3p-5L-2lv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaa-35-aRL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="106"/>
         </scene>
     </scenes>
     <resources>

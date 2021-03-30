@@ -34,6 +34,8 @@
 		244F5A022610D9C6005FA143 /* MatchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F5A012610D9C6005FA143 /* MatchResponse.swift */; };
 		244F5A242611D2AE005FA143 /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F5A232611D2AE005FA143 /* EmptyState.xib */; };
 		244F5A2F2611FE89005FA143 /* EmptyViewMatches.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244F5A2E2611FE89005FA143 /* EmptyViewMatches.xib */; };
+		244F5A3526123CB3005FA143 /* DetailMatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244F5A3426123CB3005FA143 /* DetailMatch.storyboard */; };
+		244F5A3826123CE8005FA143 /* DetailMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244F5A3726123CE8005FA143 /* DetailMatchViewController.swift */; };
 		FB1F04703F97EB84FF98CF52 /* Pods_platzi_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		244F5A012610D9C6005FA143 /* MatchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchResponse.swift; sourceTree = "<group>"; };
 		244F5A232611D2AE005FA143 /* EmptyState.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		244F5A2E2611FE89005FA143 /* EmptyViewMatches.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewMatches.xib; sourceTree = "<group>"; };
+		244F5A3426123CB3005FA143 /* DetailMatch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailMatch.storyboard; sourceTree = "<group>"; };
+		244F5A3726123CE8005FA143 /* DetailMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMatchViewController.swift; sourceTree = "<group>"; };
 		7893B394F7F7F2C8108A4BCF /* Pods-platzi-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.debug.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.debug.xcconfig"; sourceTree = "<group>"; };
 		D85F9D50C125AFFB3F4A2B8A /* Pods_platzi_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_platzi_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F87D0CC461F5226ECCF752CC /* Pods-platzi-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-platzi-test.release.xcconfig"; path = "Target Support Files/Pods-platzi-test/Pods-platzi-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		244F599F260CE3C9005FA143 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				244F5A3326123C9E005FA143 /* Match Detail */,
 				244F59B8260D884E005FA143 /* Team Detail */,
 				244F59B7260D8834005FA143 /* Main */,
 			);
@@ -215,6 +220,15 @@
 				244F59E3260E337A005FA143 /* MatchCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		244F5A3326123C9E005FA143 /* Match Detail */ = {
+			isa = PBXGroup;
+			children = (
+				244F5A3426123CB3005FA143 /* DetailMatch.storyboard */,
+				244F5A3726123CE8005FA143 /* DetailMatchViewController.swift */,
+			);
+			path = "Match Detail";
 			sourceTree = "<group>";
 		};
 		5CC7CACC15784DF9D8CA914A /* Frameworks */ = {
@@ -295,6 +309,7 @@
 			files = (
 				244F5996260CE3B6005FA143 /* LaunchScreen.storyboard in Resources */,
 				244F59BE260D8928005FA143 /* TeamCollectionViewCell.xib in Resources */,
+				244F5A3526123CB3005FA143 /* DetailMatch.storyboard in Resources */,
 				244F59E5260E337A005FA143 /* MatchCollectionViewCell.xib in Resources */,
 				244F5993260CE3B6005FA143 /* Assets.xcassets in Resources */,
 				244F5A2F2611FE89005FA143 /* EmptyViewMatches.xib in Resources */,
@@ -362,6 +377,7 @@
 				244F598A260CE3AF005FA143 /* AppDelegate.swift in Sources */,
 				244F59DF260E1917005FA143 /* Score.swift in Sources */,
 				244F59EF260F0DD6005FA143 /* TeamDetailViewModel.swift in Sources */,
+				244F5A3826123CE8005FA143 /* DetailMatchViewController.swift in Sources */,
 				244F59AC260D83D5005FA143 /* Season.swift in Sources */,
 				244F59E9260ECB22005FA143 /* TeamDetailViewController.swift in Sources */,
 				244F59FF2610CD37005FA143 /* SvgImageProcessor.swift in Sources */,
@@ -529,7 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idm.platzi-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -549,7 +565,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idm.platzi-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

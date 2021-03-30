@@ -10,8 +10,8 @@ import Foundation
 struct Referee: Codable {
     let id: Int
     let name: String
-    let role: String
-    let nationality: String
+    let role: String?
+    let nationality: String?
     
     static var `default`: Referee {
         .init(id: 0, name: "", role: "", nationality: "")
