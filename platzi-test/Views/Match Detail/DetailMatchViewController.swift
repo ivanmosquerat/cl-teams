@@ -25,12 +25,9 @@ class DetailMatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeView))
         
-        //debugPrint(match)
         setupUI()
-        
     }
     
     private func setupUI(){

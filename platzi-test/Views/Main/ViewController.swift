@@ -34,9 +34,7 @@ class ViewController: UIViewController {
         
         let reloadButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(reloadCompetitionData))
         
-        
         navigationItem.rightBarButtonItems = [reloadButton]
-        
     }
     
     // MARK: - Methods
@@ -48,8 +46,7 @@ class ViewController: UIViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "segueToDetail", let teamDetailViewController = segue.destination as? TeamDetailViewController{
+        if segue.identifier == Segues.toTeamDetail.identifier, let teamDetailViewController = segue.destination as? TeamDetailViewController{
             teamDetailViewController.team = teamSelected
         }
     }
@@ -60,7 +57,6 @@ class ViewController: UIViewController {
 // MARK: - MainModelViewDelegate
 extension ViewController: MainModelViewDelegate{
     func reloadData() {
-        
         activityIndicator.stopAnimating()
         teamsCollectionView.backgroundView = viewModel.numberOfTeams == 0 ? emptyView : nil
         teamsCollectionView.reloadData()
@@ -71,9 +67,8 @@ extension ViewController: MainModelViewDelegate{
 extension ViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         teamSelected = viewModel.item(at: indexPath)
-        performSegue(withIdentifier: "segueToDetail", sender: nil)
+        performSegue(withIdentifier: Segues.toTeamDetail.identifier, sender: nil)
     }
 }
 
@@ -103,8 +98,6 @@ extension ViewController: UICollectionViewDataSource{
         cell.setupCellWith(name: viewModel.item(at: indexPath).name ?? "", flag: viewModel.item(at: indexPath).crestUrl ?? "")
         
         return cell
-        
     }
-    
 }
 

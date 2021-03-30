@@ -9,7 +9,5 @@ import Foundation
 
 struct MatchResponse: Codable {
     let count: Int?
-    //let filters
-    //let season: Season
     let matches: [Match]
 }

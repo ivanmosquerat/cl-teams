@@ -18,4 +18,14 @@ enum Cells: String {
         case .matchCollectionViewCell:  return "MatchCollectionViewCell"
         }
     }
+    
+    var UInib: String{
+        switch self {
+        
+        case .teamCollectionViewCell:   return "TeamCollectionViewCell"
+            
+        case .matchCollectionViewCell:  return "MatchCollectionViewCell"
+
+        }
+    }
 }

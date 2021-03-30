@@ -20,7 +20,6 @@ struct Score: Codable{
         .init(winner: "", duration: "", fullTime: TimeSection.default, halfTime: TimeSection.default, extraTime: TimeSection.default, penalties: TimeSection.default)
     }
     
-    
 }
 
 struct TimeSection: Codable {

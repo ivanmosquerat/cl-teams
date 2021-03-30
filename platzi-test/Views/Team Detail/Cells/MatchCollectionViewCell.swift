@@ -19,10 +19,7 @@ class MatchCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-    
-    
     
     func setupCellWith(match: Match){
         

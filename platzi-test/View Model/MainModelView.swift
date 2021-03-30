@@ -15,14 +15,14 @@ class MainModelView {
     // MARK: - Properties
     private var championLeagueTeams: [Team] = []
     var delegate: MainModelViewDelegate?
-    
-    init(){
-        getChampionsLeagueTeams(url: "https://api.football-data.org/v2/competitions/CL/teams")
-    }
-    
     var numberOfTeams: Int {
         return championLeagueTeams.count
     }
+    
+    init(){
+        getChampionsLeagueTeams(url: Network.getChampionsLeagueTeams.url)
+    }
+    
     
     // MARK: - Methods
     
@@ -69,7 +69,7 @@ class MainModelView {
     
     func reload(){
         championLeagueTeams.removeAll()
-        getChampionsLeagueTeams(url: "https://api.football-data.org/v2/competitions/CL/teams")
+        getChampionsLeagueTeams(url: Network.getChampionsLeagueTeams.url)
     }
     
 }

@@ -47,13 +47,11 @@ class TeamDetailViewModel {
             }
             
             let dataFromJson = try! JSONDecoder().decode(MatchResponse.self, from: data)
-            
             self.matches = dataFromJson.matches
             
             DispatchQueue.main.async {
                 self.delegate?.reloadData()
             }
-            
         }
         
         task.resume()

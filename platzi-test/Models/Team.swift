@@ -27,6 +27,7 @@ struct Team: Codable {
         .init(id: 0, area: Area.default, name: "", shortName: "", tla: "", crestUrl: "", address: "", phone: "", website: "", email: "", founded: 0, clubColors: "", venue: "", lastUpdated: "")
     }
     
+    // football-data.org provides the team colors as a string separated by " / "
     var colors: [UIColor]{
         let strColors = clubColors ?? ""
         let arrayStrColors = strColors.components(separatedBy: " / ")

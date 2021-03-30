@@ -38,7 +38,6 @@ class TeamDetailViewController: UIViewController {
     // MARK: - Actions
     @IBAction func openTeamLink(_ sender: Any) {
         if let url = URL(string: team.website ?? ""){
-            
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
@@ -68,7 +67,7 @@ class TeamDetailViewController: UIViewController {
     }
     
     
-    /// <#Description#>
+    /// Each color has to be added as an UIView on stack view because the number of colors changes in each team.
     func createColorsViews(){
         
         for color in team.colors{
@@ -91,7 +90,7 @@ class TeamDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "segueToMatchDetail"{
+        if segue.identifier == Segues.toMatchDetail.identifier{
             
             let navigation: UINavigationController = segue.destination as! UINavigationController
             var matchDetailViewController = DetailMatchViewController.init()
@@ -118,11 +117,8 @@ extension TeamDetailViewController: TeamDetailViewModelDelegate{
 // MARK: - UICollectionViewDelegate
 extension TeamDetailViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        debugPrint(viewModel.item(at: indexPath).awayTeam?.name)
         matchSelected = viewModel.item(at: indexPath)
-        debugPrint(matchSelected.awayTeam?.name)
-        self.performSegue(withIdentifier: "segueToMatchDetail", sender: nil)
+        self.performSegue(withIdentifier: Segues.toMatchDetail.identifier, sender: nil)
     }
 }
 
